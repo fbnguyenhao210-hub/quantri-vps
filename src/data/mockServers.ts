@@ -1,12 +1,22 @@
 export interface ServerData {
   id: string;
+  index: number;
   name: string;
   ip: string;
   location: string;
+  country: string;
+  lat: number;
+  lng: number;
   status: "online" | "offline" | "warning";
   os: string;
   uptime: string;
   cpu: number;
+  cpuModel: string;
+  cpuCores: number;
+  cpuThreads: number;
+  cpuSpeed: string;
+  cpuCache: string;
+  cpuArch: string;
   ram: { used: number; total: number };
   disk: { used: number; total: number };
   networkIn: number;
@@ -19,13 +29,23 @@ export interface ServerData {
 export const mockServers: ServerData[] = [
   {
     id: "vps-01",
+    index: 1,
     name: "Web Server - Production",
     ip: "103.45.67.12",
     location: "Singapore",
+    country: "SG",
+    lat: 1.3521,
+    lng: 103.8198,
     status: "online",
     os: "Ubuntu 22.04 LTS",
     uptime: "45 ngày 12 giờ",
     cpu: 34,
+    cpuModel: "Intel Xeon E5-2680 v4",
+    cpuCores: 4,
+    cpuThreads: 8,
+    cpuSpeed: "2.40 GHz",
+    cpuCache: "35 MB",
+    cpuArch: "x86_64",
     ram: { used: 2.8, total: 4 },
     disk: { used: 42, total: 80 },
     networkIn: 125.4,
@@ -36,13 +56,23 @@ export const mockServers: ServerData[] = [
   },
   {
     id: "vps-02",
+    index: 2,
     name: "Database Server",
     ip: "103.45.67.15",
-    location: "Tokyo",
+    location: "Tokyo, Nhật Bản",
+    country: "JP",
+    lat: 35.6895,
+    lng: 139.6917,
     status: "online",
     os: "CentOS 8",
     uptime: "120 ngày 5 giờ",
     cpu: 67,
+    cpuModel: "AMD EPYC 7542",
+    cpuCores: 8,
+    cpuThreads: 16,
+    cpuSpeed: "2.90 GHz",
+    cpuCache: "128 MB",
+    cpuArch: "x86_64",
     ram: { used: 7.2, total: 8 },
     disk: { used: 156, total: 200 },
     networkIn: 45.8,
@@ -53,13 +83,23 @@ export const mockServers: ServerData[] = [
   },
   {
     id: "vps-03",
+    index: 3,
     name: "API Gateway",
     ip: "185.22.33.44",
-    location: "Hà Nội",
+    location: "Hà Nội, Việt Nam",
+    country: "VN",
+    lat: 21.0278,
+    lng: 105.8342,
     status: "warning",
     os: "Debian 11",
     uptime: "8 ngày 22 giờ",
     cpu: 89,
+    cpuModel: "Intel Xeon E-2288G",
+    cpuCores: 8,
+    cpuThreads: 16,
+    cpuSpeed: "3.70 GHz",
+    cpuCache: "16 MB",
+    cpuArch: "x86_64",
     ram: { used: 3.5, total: 4 },
     disk: { used: 35, total: 40 },
     networkIn: 340.5,
@@ -70,13 +110,23 @@ export const mockServers: ServerData[] = [
   },
   {
     id: "vps-04",
+    index: 4,
     name: "Mail Server",
     ip: "45.77.88.99",
-    location: "TP.HCM",
+    location: "TP.HCM, Việt Nam",
+    country: "VN",
+    lat: 10.8231,
+    lng: 106.6297,
     status: "offline",
     os: "Ubuntu 20.04 LTS",
     uptime: "—",
     cpu: 0,
+    cpuModel: "Intel Core i5-10400",
+    cpuCores: 6,
+    cpuThreads: 12,
+    cpuSpeed: "2.90 GHz",
+    cpuCache: "12 MB",
+    cpuArch: "x86_64",
     ram: { used: 0, total: 2 },
     disk: { used: 12, total: 40 },
     networkIn: 0,
@@ -87,13 +137,23 @@ export const mockServers: ServerData[] = [
   },
   {
     id: "vps-05",
+    index: 5,
     name: "Backup Server",
     ip: "172.16.0.100",
-    location: "Đà Nẵng",
+    location: "Đà Nẵng, Việt Nam",
+    country: "VN",
+    lat: 16.0544,
+    lng: 108.2022,
     status: "online",
     os: "Rocky Linux 9",
     uptime: "200 ngày 3 giờ",
     cpu: 12,
+    cpuModel: "AMD Ryzen 5 5600X",
+    cpuCores: 6,
+    cpuThreads: 12,
+    cpuSpeed: "3.70 GHz",
+    cpuCache: "32 MB",
+    cpuArch: "x86_64",
     ram: { used: 1.2, total: 4 },
     disk: { used: 320, total: 500 },
     networkIn: 5.2,
@@ -104,13 +164,23 @@ export const mockServers: ServerData[] = [
   },
   {
     id: "vps-06",
+    index: 6,
     name: "Staging Server",
     ip: "192.168.1.50",
     location: "Singapore",
+    country: "SG",
+    lat: 1.2905,
+    lng: 103.8520,
     status: "online",
     os: "Ubuntu 22.04 LTS",
     uptime: "15 ngày 8 giờ",
     cpu: 45,
+    cpuModel: "Intel Xeon Gold 6248",
+    cpuCores: 20,
+    cpuThreads: 40,
+    cpuSpeed: "2.50 GHz",
+    cpuCache: "27.5 MB",
+    cpuArch: "x86_64",
     ram: { used: 3.1, total: 8 },
     disk: { used: 55, total: 100 },
     networkIn: 78.3,
