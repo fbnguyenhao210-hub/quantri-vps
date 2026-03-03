@@ -41,6 +41,18 @@ const Index = () => {
     <div className="min-h-screen bg-background p-4 md:p-8 relative overflow-hidden">
       {/* Background effects */}
       <div className="network-bg" />
+      {/* Data pulses chạy dọc dây */}
+      <div className="cable-pulse cable-v1" />
+      <div className="cable-pulse cable-v2" />
+      <div className="cable-pulse cable-v3" />
+      <div className="cable-pulse cable-h1" />
+      <div className="cable-pulse cable-h2" />
+      {/* Junction nodes - nút giao dây */}
+      <div className="junction-node junction-1" />
+      <div className="junction-node junction-2" />
+      <div className="junction-node junction-3" />
+      <div className="junction-node junction-4" />
+      {/* Anime glow orbs */}
       <div className="anime-orb anime-orb-1" />
       <div className="anime-orb anime-orb-2" />
       <div className="anime-orb anime-orb-3" />
