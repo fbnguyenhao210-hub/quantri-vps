@@ -39,8 +39,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background p-4 md:p-8 relative overflow-hidden">
-      {/* Network cable light effect */}
+      {/* Background effects */}
       <div className="network-bg" />
+      <div className="anime-orb anime-orb-1" />
+      <div className="anime-orb anime-orb-2" />
+      <div className="anime-orb anime-orb-3" />
+      <div className="scan-line" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <DashboardHeader activeTab={activeTab} onTabChange={setActiveTab} />
